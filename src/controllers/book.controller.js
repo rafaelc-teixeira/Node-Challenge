@@ -14,7 +14,11 @@ exports.findAll = function(req, res) {
 
 
 exports.create = function(req, res) {
-    const new_book = new Book(req.body);
+    const new_book = new Book({
+      name: req.body.name,
+      author: req.body.author,
+      description: req.body.description,
+      image: req.body.image });
 
     //handles null error 
    if(req.body.constructor === Object && Object.keys(req.body).length === 0){

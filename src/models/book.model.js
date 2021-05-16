@@ -1,7 +1,7 @@
 'user strict';
-var mysqlConnection = require('../../config/db.config');
+var mysqlConnection = require('../config/db.config');
 
-//Employee object create
+//Book object create
 var Book = function(book){
     this.name         = book.name;
     this.author       = book.author;
