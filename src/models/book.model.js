@@ -23,7 +23,7 @@ Book.create = function (newBook, result) {
     });           
 };
 Book.findById = function (id, result) {
-  mysqlConnection.query("Select * from book where id = ? ", id, function (err, res) {             
+    mysqlConnection.query("Select * from book where id = ? ", id, function (err, res) {             
         if(err) {
             console.log("error: ", err);
             result(err, null);

@@ -3,7 +3,7 @@
 const Book = require('../models/book.model');
 
 exports.findAll = function(req, res) {
-  Book.findAll(function(err, book) {
+  Book.findAll(function (err, book) {
     if (err) {
       res.send(err);
     }
