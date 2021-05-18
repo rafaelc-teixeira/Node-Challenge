@@ -39,8 +39,7 @@ Book.findAll = function (result) {
             console.log("error: ", err);
             result(null, err);
         }
-        else{
-            console.log('books : ', res);  
+        else{  
             result(null, res);
         }
     });   
